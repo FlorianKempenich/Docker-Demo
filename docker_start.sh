@@ -12,6 +12,7 @@ HOST_PORT=4567
 
 docker run \
     -p $HOST_PORT:3000 \
+    -v "$(pwd)/specialdir:/my_root_dir/specialdir:ro" \
     --name=$CONTAINER_NAME \
     --rm \
     -d \
