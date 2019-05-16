@@ -8,8 +8,10 @@ CONTAINER_NAME=$(cat ./.container_name)
 # --rm: Remove on 'stop'/'kill'
 # -d: Run in the background, as a Deamon ('d')
 
+HOST_PORT=4567
+
 docker run \
-    -p 1234:3000 \
+    -p $HOST_PORT:3000 \
     --name=$CONTAINER_NAME \
     --rm \
     -d \
